@@ -1,0 +1,9 @@
+.idea
+**/target/
+allure-results/
+.allure/
+logs/
+.DS_Store
+ui-automation-smartplans.iml
+ajcore.*
+securedata.properties
