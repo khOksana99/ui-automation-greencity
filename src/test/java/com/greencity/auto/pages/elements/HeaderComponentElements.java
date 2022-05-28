@@ -12,5 +12,6 @@ public interface HeaderComponentElements {
     By mySpaceTab = By.xpath("//nav[@class='header_navigation-menu-left']/ul/li[" + TabNumber.MY_SPACE.getTabNumber() +"]");
     By usbCourierTab = By.xpath("//nav[@class='header_navigation-menu-left']/ul/li[" + TabNumber.USB_COURIER.getTabNumber() +"]");
     By languageOption = By.cssSelector("ul[class='header_lang-switcher-wrp header_navigation-menu-right-list']");
-    By signInOption = By.cssSelector("input[class='header_sign-in-link tertiary-global-button']");
+    By signInOption = By.cssSelector("a[class='header_sign-in-link tertiary-global-button']");
+    By signedInUser = By.xpath("//a[@class='header_user-name']/span");
 }
