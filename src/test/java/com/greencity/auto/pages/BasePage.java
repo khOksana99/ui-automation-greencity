@@ -4,8 +4,8 @@ import com.greencity.auto.helpers.Utils;
 import com.greencity.auto.pages.components.HeaderComponent;
 import com.greencity.auto.pages.elements.BasePageElements;
 
-import static com.codeborne.selenide.Selenide.$;
-import static com.codeborne.selenide.Selenide.open;
+import static com.codeborne.selenide.Selenide.*;
+import static com.codeborne.selenide.Selenide.executeJavaScript;
 import static com.greencity.auto.pages.elements.HeaderComponentElements.*;
 
 public class BasePage implements BasePageElements {
@@ -79,7 +79,17 @@ public class BasePage implements BasePageElements {
      * @return new Usb Login page
      */
     public LoginPage navigateToLoginPage() {
-        $(languageOption).click();
+        $(signInOption).click();
         return new LoginPage();
+    }
+
+    public BasePage scrollToTop() {
+        executeJavaScript("window.scrollBy(0, -document.body.scrollHeight*10)");
+        return this;
+    }
+
+    public BasePage scrollToBottom() {
+        executeJavaScript("window.scrollBy(0, document.body.scrollHeight*10)");
+        return this;
     }
 }
