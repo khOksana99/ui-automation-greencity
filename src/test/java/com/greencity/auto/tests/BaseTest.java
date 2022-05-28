@@ -18,6 +18,8 @@ public class BaseTest {
     @BeforeClass
     public void driverSetUp() {
         DriverConfig.initializeDriver();
+        basePage = new BasePage();
+        basePage.openPage();
         basePage.navigateToLoginPage()
                 .logIn(User.User1.getEmail(), User.User1.getPassword());
 
