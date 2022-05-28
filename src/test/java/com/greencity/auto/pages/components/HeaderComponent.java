@@ -1,5 +1,11 @@
 package com.greencity.auto.pages.components;
 
-public class HeaderComponent {
-    private final LanguageComponent languageComponent = new LanguageComponent();
+import com.greencity.auto.pages.elements.HeaderComponentElements;
+
+import static com.codeborne.selenide.Selenide.$;
+
+public class HeaderComponent implements HeaderComponentElements {
+    public String getSignedInUserName() {
+        return $(signedInUser).text();
+    }
 }
