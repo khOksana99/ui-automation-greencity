@@ -2,7 +2,6 @@ package com.greencity.auto.facade;
 
 import com.codeborne.selenide.Condition;
 import com.greencity.auto.pages.EcoNewsItemPage;
-import org.hamcrest.Matchers;
 
 import static com.codeborne.selenide.Selenide.$;
 import static com.greencity.auto.pages.elements.EcoNewsItemPageElements.ecoNewsItemPageMainTitle;

@@ -1,9 +1,8 @@
 package com.greencity.auto.tests;
 
-import com.greencity.auto.tests.BaseEcoNewsItemTest;
 import org.testng.annotations.Test;
 
-public class CommentEcoNewsTests extends BaseEcoNewsItemTest {
+public class CommentEcoNewsTests extends BaseTest {
     private final String comment = "Comment";
     private final String editComment = "Edited comment";
     private final String cancelEditComment = "Canceled edit comment";
